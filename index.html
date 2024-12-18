@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Hub</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="app-container">
+        <!-- Sign-up Section -->
+        <div id="signup" class="section">
+            <h2>Sign Up</h2>
+            <input type="email" id="email" placeholder="Enter your email">
+            <input type="password" id="password" placeholder="Enter your password">
+            <button class="futuristic-btn" onclick="signUp()">Sign Up</button>
+        </div>
+
+        <!-- Redesigned Calculator Section -->
+        <div id="calculator" class="section">
+            <h2>Calculator</h2>
+            <div class="calc-container">
+                <input type="text" id="calc-display" disabled>
+                <div id="calc-buttons">
+                    <button class="futuristic-btn" onclick="clearCalc()">C</button>
+                    <button class="futuristic-btn" onclick="pressKey('/')">/</button>
+                    <button class="futuristic-btn" onclick="pressKey('*')">*</button>
+                    <button class="futuristic-btn" onclick="pressKey('-')">-</button>
+                    <button class="futuristic-btn" onclick="pressKey('7')">7</button>
+                    <button class="futuristic-btn" onclick="pressKey('8')">8</button>
+                    <button class="futuristic-btn" onclick="pressKey('9')">9</button>
+                    <button class="futuristic-btn" onclick="pressKey('+')">+</button>
+                    <button class="futuristic-btn" onclick="pressKey('4')">4</button>
+                    <button class="futuristic-btn" onclick="pressKey('5')">5</button>
+                    <button class="futuristic-btn" onclick="pressKey('6')">6</button>
+                    <button class="futuristic-btn" onclick="calculate()">=</button>
+                    <button class="futuristic-btn" onclick="pressKey('1')">1</button>
+                    <button class="futuristic-btn" onclick="pressKey('2')">2</button>
+                    <button class="futuristic-btn" onclick="pressKey('3')">3</button>
+                    <button class="futuristic-btn span-two" onclick="pressKey('0')">0</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Book Reader Section -->
+        <div id="book-reader" class="section">
+            <h2>Book Reader</h2>
+            <input type="file" id="file-upload" accept=".pdf,.txt">
+            <button class="futuristic-btn" onclick="readBook()">Read Book</button>
+            <div id="book-content"></div>
+        </div>
+
+        <!-- Notes Section -->
+        <div id="notes" class="section">
+            <h2>Take a Note</h2>
+            <textarea id="note-input" placeholder="Write your note here..."></textarea>
+            <button class="futuristic-btn" onclick="saveNote()">Save Note</button>
+        </div>
+
+        <!-- Google Search Section -->
+        <div id="google-search" class="section">
+            <h2>Google Search</h2>
+            <input type="text" id="google-query" placeholder="Search on Google">
+            <button class="futuristic-btn" onclick="googleSearch()">Search</button>
+        </div>
+
+        <!-- Ask AI Section -->
+        <div id="ask-ai" class="section">
+            <h2>Ask AI</h2>
+            <textarea id="ai-input" placeholder="Ask anything..."></textarea>
+            <input type="file" id="image-upload" accept="image/*">
+            <button class="futuristic-btn" onclick="askAI()">Ask AI</button>
+            <div id="ai-response"></div>
+        </div>
+
+        <!-- Futuristic Bottom Navigation -->
+        <div class="bottom-nav">
+            <button class="futuristic-btn" onclick="showSection('signup')">Sign Up</button>
+            <button class="futuristic-btn" onclick="showSection('calculator')">Calculator</button>
+            <button class="futuristic-btn" onclick="showSection('book-reader')">Book Reader</button>
+            <button class="futuristic-btn" onclick="showSection('notes')">Notes</button>
+            <button class="futuristic-btn" onclick="showSection('google-search')">Google Search</button>
+            <button class="futuristic-btn" onclick="showSection('ask-ai')">Ask AI</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

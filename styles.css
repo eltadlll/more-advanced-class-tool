@@ -1,0 +1,174 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #121212;
+    color: #fff;
+    transition: background-image 0.5s ease;
+    background-size: cover;
+    background-position: center;
+}
+
+#app-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: space-between;
+}
+
+.section {
+    padding: 20px;
+    display: none;
+    animation: fadeIn 0.8s;
+}
+
+h2 {
+    margin-bottom: 15px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    background-color: #333;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.futuristic-btn {
+    background: none;
+    border: 2px solid #00ff99;
+    padding: 10px;
+    color: white;
+    cursor: pointer;
+    border-radius: 8px;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    position: relative;
+}
+
+.futuristic-btn:hover {
+    background-color: rgba(0, 255, 153, 0.2);
+}
+
+.futuristic-btn::before, .futuristic-btn::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 3px;
+    background-color: #00ff99;
+    transition: 0.4s;
+}
+
+.futuristic-btn::before {
+    left: 0;
+    top: 0;
+}
+
+.futuristic-btn::after {
+    right: 0;
+    bottom: 0;
+}
+
+.futuristic-btn:hover::before, .futuristic-btn:hover::after {
+    width: 100%;
+}
+
+.bottom-nav {
+    display: flex;
+    justify-content: space-around;
+    background-color: #333;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.bottom-nav button {
+    font-size: 16px;
+}
+
+.bottom-nav button:hover {
+    color: #00ff99;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Calculator Styles */
+.calc-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#calc-display {
+    width: 300px;
+    padding: 20px;
+    margin-bottom: 15px;
+    font-size: 32px;
+    text-align: right;
+    background-color: #444;
+    border-radius: 5px;
+}
+
+#calc-buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 75px);
+    gap: 10px;
+}
+
+#calc-buttons button {
+    width: 75px;
+    height: 75px;
+    font-size: 24px;
+    background-color: #555;
+    border: none;
+    border-radius: 5px;
+    color: white;
+}
+
+#calc-buttons button:hover {
+    background-color: #00ff99;
+}
+
+.span-two {
+    grid-column: span 2;
+}
+
+/* Dynamic Backgrounds */
+#signup {
+    background-image: url('https://www.google.com/imgres?q=sign%20up%20logo&imgurl=https%3A%2F%2Fwww.shutterstock.com%2Fimage-vector%2Fblack-simple-finger-presses-on-260nw-618096680.jpg&imgrefurl=https%3A%2F%2Fwww.shutterstock.com%2Fsearch%2Fsignup-icon&docid=TpIhKuHb6DNnUM&tbnid=wyivIQDPTNkhHM&vet=12ahUKEwixivSQodGIAxW2AvsDHSJSI7wQM3oECBsQAA..i&w=260&h=280&hcb=2&ved=2ahUKEwixivSQodGIAxW2AvsDHSJSI7wQM3oECBsQAA');
+}
+
+#calculator {
+    background-image: url('https://www.google.com/imgres?q=calculator%20logo&imgurl=https%3A%2F%2Fcdn.jim-nielsen.com%2Fios%2F512%2Fcalculator-2017-10-10.png%3Frf%3D1024&imgrefurl=https%3A%2F%2Fwww.iosicongallery.com%2Ficons%2Fcalculator-2017-10-10%2F&docid=gBIm6bMnQmxWsM&tbnid=Ws6ODioy8ggN-M&vet=12ahUKEwig65OIodGIAxWuaqQEHY-xHh0QM3oECG0QAA..i&w=512&h=512&hcb=2&ved=2ahUKEwig65OIodGIAxWuaqQEHY-xHh0QM3oECG0QAA');
+}
+
+#book-reader {
+    background-image: url('https://www.google.com/imgres?q=reader%20logo&imgurl=https%3A%2F%2Fcdn4.vectorstock.com%2Fi%2F1000x1000%2F09%2F13%2Fbook-reader-icon-isolated-on-white-vector-37980913.jpg&imgrefurl=https%3A%2F%2Fwww.vectorstock.com%2Froyalty-free-vector%2Fbook-reader-icon-isolated-on-white-vector-37980913&docid=-_2xev_UpBMQQM&tbnid=TlWIb0R7LO2vrM&vet=12ahUKEwi7w8X3oNGIAxWCRKQEHZohNvsQM3oECBoQAA..i&w=1000&h=1080&hcb=2&ved=2ahUKEwi7w8X3oNGIAxWCRKQEHZohNvsQM3oECBoQAA');
+}
+
+#notes {
+    background-image: url('https://www.google.com/imgres?q=note%20image&imgurl=https%3A%2F%2Fcdn.pixabay.com%2Fphoto%2F2012%2F04%2F12%2F12%2F29%2Fnote-29813_640.png&imgrefurl=https%3A%2F%2Fpixabay.com%2Fimages%2Fsearch%2Fnotes%2F&docid=-IemIx9WxpKGYM&tbnid=S_R6ODOKnZKe1M&vet=12ahUKEwih3u7coNGIAxWuUqQEHRliDWAQM3oECGsQAA..i&w=498&h=640&hcb=2&ved=2ahUKEwih3u7coNGIAxWuUqQEHRliDWAQM3oECGsQAA');
+}
+
+#google-search {
+    background-image: url('https://www.google.com/imgres?q=google%20image&imgurl=https%3A%2F%2Flookaside.fbsbx.com%2Flookaside%2Fcrawler%2Fmedia%2F%3Fmedia_id%3D100044408950171&imgrefurl=https%3A%2F%2Fwww.facebook.com%2FGoogleIndia%2F&docid=_Qj6mz-Y48rawM&tbnid=xRberq3Fn2MoHM&vet=12ahUKEwiD9LTMoNGIAxXaVKQEHR_tFuIQM3oECGIQAA..i&w=2048&h=2048&hcb=2&ved=2ahUKEwiD9LTMoNGIAxXaVKQEHR_tFuIQM3oECGIQAA');
+}
+
+#ask-ai {
+    background-image: url('https://www.google.com/imgres?q=ai%20image%20generator&imgurl=https%3A%2F%2Fautogpt.net%2Fwp-content%2Fuploads%2F2023%2F08%2FPogla_Explore_Nvidias_Perfusion_a_compact_yet_powerful_AI_image_72a99ad1-f594-4139-a44a-9b026034a3ba-768x512.jpg&imgrefurl=https%3A%2F%2Fautogpt.net%2Fnvidias-ai-image-generator-a-game-changer-in-the-ai-art-creation-landscape%2F&docid=SuOKlp9u3sSA3M&tbnid=SI1vnp55-xpDcM&vet=12ahUKEwj2t9qnoNGIAxUvU6QEHQ51Bi8QM3oECBsQAA..i&w=768&h=512&hcb=2&ved=2ahUKEwj2t9qnoNGIAxUvU6QEHQ51Bi8QM3oECBsQAA');
+}
